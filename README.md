@@ -15,17 +15,26 @@
 
  For ease of use the development enviroment is going to be integrated in a docker container. This hopping to standarize the dependencies, features and tools, independent of the choosen operating system. Please be aware that the minimum spects required tu run the containers are at list 4 gb of ram and a procesor compatible with virtualization (As is stated in the docker [documentation](https://docs.docker.com/desktop/install/linux-install/)). Also, be sure that the virtualization option is activated in your BIOS.
 
-## Start the web_app console
+## First Setup
+
+### 1. Start the web_app console
 
     $ docker compose run web_app bash
 
-## Start the database
+### 2. Bundle install
+
+Inside the container console
+
+    $ /app# bundle config set --local path vendor/bundle
+    $ /app# bundle install
+
+### 3. Start the database
 
 Inside the container console
 
     $ /app# bin/setup
 
-## run the web_app 
+### 4. run the web_app 
 
 In another console
 
