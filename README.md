@@ -4,7 +4,7 @@
 
  This is a little project with the objective of clarify and organice the different Lab process and activities, 
  hopping to be a tool that could help students and coordinators to take advantage of the many machines and tools 
- available in the lab, always mantainig the order and the trasability requested by the University.
+ available in the lab, mantainig the order and the trasability requested by the Faculty.
 
 
  # Development Enviroment 
@@ -13,7 +13,7 @@
  - Ruby on Rails
  - PostgreSql
 
- For ease of use the development enviroment is going to be integrated in a docker container. This hopping to standarize the dependencies, features and tools, independent of the choosen operating system. Please be aware that the minimum spects required tu run the containers are at list 4 gb of ram and a procesor compatible with virtualization (As is stated in the docker [documentation](https://docs.docker.com/desktop/install/linux-install/)). Also, be sure that the virtualization option is activated in your BIOS.
+ For ease of use the development enviroment is going to be integrated in a docker container. This hopping to standarize the dependencies, features and tools, operating system. Please be aware that the minimum specs required tu run the containers are at list 4 gb of ram and a procesor compatible with virtualization (As is stated in the docker [documentation](https://docs.docker.com/desktop/install/linux-install/)). Also, be sure that the virtualization option is activated in your BIOS.
 
 ## First Setup
 
@@ -40,6 +40,21 @@ In another console
 
     $ docker compose up
 
+
+## Considerations
+
+The work environment must be executed inside the docker container, for that you always have to call the container console before:
+
+    $ docker compose run web_app bash
+
+Then you can execute commands like, `bundle install` or `bin/rails g`.
+
+
+# Data Model
+
+The primarily data model considers the entities, atributes and relations represented in the following Relational Diagram:
+
+![Relational Diagram](media/Modelo_relacional_Lab_web_app.drawio.svg)
 
  # Useful Links 
 
